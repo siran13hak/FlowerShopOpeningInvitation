@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-background {
+  height: 100vh;
+  width: 100%;
+ position: relative;
+isolation: isolate;
+display: flex;
+align-items: center;
+justify-content:space-around;
+flex-direction: column;
+}
+
+.image-background::after {
+  content: '';
+  position: absolute;
+inset: 0;
+z-index: -1;
+opacity: .8;
+background-image: url(./background.jpg);
+background-size: cover;
+}
+
+.invitation-text {
+color: #fff;
+font-family: "Pacifico", cursive;
+font-size: 36px;
+text-shadow: 2px 3px 3px rgba(0,0,0,0.75);
+letter-spacing: 4px;
+}
+
+
+
+.invitation-text h2 {
+  text-align: center;
+}
+
+.letter{
+  font-size: 100px;
+animation: animateLetter 1s 1s ease-out infinite;
+}
+ 
+.letter2{
+margin-bottom: 20px;
+}
+
+@keyframes animateLetter {
+ 100% {
+  transform: scale(1.2);
+ }
+}
+
+.message {
+  width: 400px;
+  height: 600px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  display: none;
+  margin: auto 0;
+  text-align: center;
+  box-shadow: 10px 10px 51px 0px rgba(0,0,0,0.75);
+}
+
+.msg-container {
+  margin-top: 80px;
+  font-size: 25px;
+  color: #00002a;
+  font-family: "Amatic SC", sans-serif;
+
+}
+
+.msg-container h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+  }
+.msg-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .msg-container p ion-icon{
+    margin-right: 10px;
+   
+  }
+
+  .msg-container h5 {
+    padding: 0 30px;
+    margin-top: 20px;
+  }
+
+
+  .msg-container h6 {
+    margin-top: 60px;
+  }
+
+  .social ion-icon {
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    outline: none;
+  border-radius: 2px;
+  }
+
+  .social ion-icon:hover {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+
+ion-icon[name="heart-outline"] {
+animation: animateLetter 1s 1s ease-out infinite;
+}
+
+ion-icon[name="close-outline"] {
+  margin-top: 30px;
+}
